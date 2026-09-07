@@ -39,7 +39,7 @@ export default function Home() {
         </h1>
         <p className="mt-2 text-md font-mono text-[#A31D1D]">
           Founder, WhatsApp Growth Solutions 
-   \n
+   
           Full-Stack Automation Engineer
         </p>
         <p className="mt-6 text-lg text-[#A1A1AA] max-w-2xl leading-relaxed">
