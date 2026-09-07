@@ -43,10 +43,8 @@ export default function Home() {
           Full-Stack Automation Engineer
         </p>
         <p className="mt-6 text-lg text-[#A1A1AA] max-w-2xl leading-relaxed">
-          I build high-velocity full-stack applications and automated
-          communication systems. By combining advanced AI development workflows
-          with deep API architecture, I help businesses scale operations and
-          engage customers instantly.
+          Software engineer specializing in interactive user interfaces and custom API integrations. 
+          I design automated dispatch tools, custom web apps, and serverless workflows that handle customer interactions instantly.
         </p>
         <div className="mt-8 flex gap-4">
           <a
@@ -83,8 +81,7 @@ export default function Home() {
         </div>
 
         <p className="text-[#A1A1AA] mb-6 leading-relaxed">
-          We handle the entire operational pipeline to transform WhatsApp into a
-          primary sales and marketing channel for modern enterprises.
+          Transform your WhatsApp into a reliable sales channel. I set up automated response bots, custom order pipelines, and direct customer dispatch tools tailored to your business.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -93,15 +90,13 @@ export default function Home() {
               Infrastructure Setup
             </h4>
             <p className="text-sm text-[#A1A1AA]">
-              WABA Business Verification, complete Cloud API configuration, and
-              catalogs deployment.
+              Complete Meta Cloud API integration, WABA business verification, and automated catalog deployment.
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
             <h4 className="font-semibold text-white mb-2">Conversational AI</h4>
             <p className="text-sm text-[#A1A1AA]">
-              Custom chatbots engineered to handle complex queries, automate
-              context-aware replies, and capture leads.
+              Automated chatbots designed to handle customer inquiries, deliver instant replies, and convert leads.
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
@@ -109,8 +104,7 @@ export default function Home() {
               Workflow Automation
             </h4>
             <p className="text-sm text-[#A1A1AA]">
-              Connecting messaging frontends to cloud databases and legacy CRMs
-              via custom serverless middleware.
+              Connect your messaging apps directly to cloud databases and CRMs using lightweight serverless functions.
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
@@ -118,8 +112,7 @@ export default function Home() {
               Broadcast Marketing
             </h4>
             <p className="text-sm text-[#A1A1AA]">
-              Structuring legally compliant, high-conversion broadcast and
-              messaging template retention strategies.
+              Designing compliant Meta message templates and opt-in strategies that drive high open rates and keep subscriber lists active.
             </p>
           </div>
         </div>
@@ -142,10 +135,8 @@ export default function Home() {
                 </span>
               </div>
               <p className="mt-3 text-sm text-[#A1A1AA] leading-relaxed">
-                An e-commerce conversational engine converting a WhatsApp number
-                into a main storefront interface. Handles structured databases,
-                session tracking, and catalog purchases.
-              </p>
+                  An automated WhatsApp ordering system that turns a phone number into an interactive online storefront. Built to handle session state, catalog items, and order logging.           
+               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
                   Next.js
@@ -182,9 +173,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="mt-3 text-sm text-[#A1A1AA] leading-relaxed">
-                An onboarding engine designed to simplify the developer
-                acquisition setup, making it easy for non-technical business
-                owners to stand up meta developer credentials without friction.
+                A guided onboarding tool that helps non-technical business owners set up their Meta Developer account and API credentials without technical friction.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
