@@ -38,12 +38,10 @@ export default function Home() {
           Adam Mbori
         </h1>
         <p className="mt-2 text-md font-mono text-[#A31D1D]">
-          Founder, WhatsApp Growth Solutions 
-   
-          Full-Stack Automation Engineer
+          Founder, WhatsApp Growth Solutions | AI Workflows & Integrations 
         </p>
         <p className="mt-6 text-lg text-[#A1A1AA] max-w-2xl leading-relaxed">
-          Software engineer specializing in interactive user interfaces and custom API integrations. 
+          Software engineer specializing in; interactive user interfaces and custom API integrations. I also specialize in AI Workflows & Integrations.  
           I design automated dispatch tools, custom web apps, and serverless workflows that handle customer interactions instantly.
         </p>
         <div className="mt-8 flex gap-4">
