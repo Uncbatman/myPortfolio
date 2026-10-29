@@ -11,26 +11,26 @@ const demos = [
 ];
 
 export default function Showreel() {
-  let css = "";
+  const css: string[] = [];
   let n = 0;
   const pc = (t: number) => ((t / T) * 100).toFixed(3);
   const E = "cubic-bezier(.2,.8,.2,1)";
   // Animate from `from` to `to` between t0 and t1 (seconds), looping with the reel.
   const an = (t0: number, t1: number, from: string, to: string, ease = E) => {
     const id = `k${n++}`;
-    css += `@keyframes ${id}{0%,${pc(t0)}%{${from}}${pc(t1)}%,100%{${to}}}.${id}{animation:${id} ${T}s infinite ${ease}}`;
+    css.push(`@keyframes ${id}{0%,${pc(t0)}%{${from}}${pc(t1)}%,100%{${to}}}.${id}{animation:${id} ${T}s infinite ${ease}}`);
     return id;
   };
   // A scene fades in at t0 and out at t1, crossfading with its neighbours.
   const sc = (t0: number, t1: number) => {
     const id = `s${n++}`;
-    css += `@keyframes ${id}{0%,${pc(t0)}%{opacity:0}${pc(t0 + 0.5)}%,${pc(t1 - 0.5)}%{opacity:1}${pc(t1)}%,100%{opacity:0}}.${id}{animation:${id} ${T}s infinite linear}`;
+    css.push(`@keyframes ${id}{0%,${pc(t0)}%{opacity:0}${pc(t0 + 0.5)}%,${pc(t1 - 0.5)}%{opacity:1}${pc(t1)}%,100%{opacity:0}}.${id}{animation:${id} ${T}s infinite linear}`);
     return id;
   };
   const pop = (t: number) =>
     an(t, t + 0.5, "opacity:0;transform:scale(.6)", "opacity:1;transform:none", "cubic-bezier(.3,1.5,.5,1)");
   const rise = (t: number) => an(t, t + 0.5, "opacity:0;transform:translateY(2cqw) scale(.92)", "opacity:1;transform:none");
-  const Up = ({ t, className = "", children }: { t: number; className?: string; children: React.ReactNode }) => (
+  const up = (t: number, children: React.ReactNode, className = "") => (
     <span className="block overflow-hidden pb-[.12em]">
       <span className={`block ${an(t, t + 0.7, "transform:translateY(115%)", "transform:none")} ${className}`}>{children}</span>
     </span>
@@ -39,7 +39,7 @@ export default function Showreel() {
   const head = "text-[4.6cqw] font-extrabold leading-none tracking-tighter";
 
   const code = [
-    <><span className="text-[#FF6B6B]">on</span>(<span className="text-[#9ECE6A]">"message"</span>, <span className="text-[#FF6B6B]">async</span> (msg) =&gt; {"{"}</>,
+    <><span className="text-[#FF6B6B]">on</span>(<span className="text-[#9ECE6A]">&quot;message&quot;</span>, <span className="text-[#FF6B6B]">async</span> (msg) =&gt; {"{"}</>,
     <>{"  "}<span className="text-[#FF6B6B]">const</span> reply = <span className="text-[#FF6B6B]">await</span> answer(msg.text);</>,
     <>{"  "}<span className="text-[#FF6B6B]">await</span> send(msg.from, reply);</>,
     <>{"  "}<span className="text-[#FF6B6B]">await</span> saveOrder(msg);</>,
@@ -85,8 +85,8 @@ export default function Showreel() {
       {/* 1. Title */}
       <div className={`scene first ${s1}`}>
         <div className="absolute left-[6cqw] top-[17cqw]">
-          <Up t={0.3} className="text-[11cqw] font-extrabold leading-[.95] tracking-tighter">Adam Mbori</Up>
-          <div className="mt-[1.2cqw]"><Up t={0.9} className="text-[2.6cqw] text-[#A8A2A6]">Founder of Growth Solutions by Adam</Up></div>
+          {up(0.3, "Adam Mbori", "text-[11cqw] font-extrabold leading-[.95] tracking-tighter")}
+          <div className="mt-[1.2cqw]">{up(0.9, "Founder of Growth Solutions by Adam", "text-[2.6cqw] text-[#A8A2A6]")}</div>
           <div className={`mt-[2cqw] h-[.5cqw] w-[26cqw] origin-left bg-[#D12A2A] ${an(1.2, 2, "transform:scaleX(0)", "transform:none")}`} />
           <div className="mt-[2.4cqw] flex flex-col items-start gap-[.9cqw]">
             {["WhatsApp sales systems", "Websites for small businesses", "Automation tools"].map((c, i) => (
@@ -107,7 +107,7 @@ export default function Showreel() {
 
       {/* 2. Chat to orders */}
       <div className={`scene ${s2}`}>
-        <div className="absolute left-[6cqw] top-[5cqw]"><Up t={4.8} className={head}>Customers message. Orders appear.</Up></div>
+        <div className="absolute left-[6cqw] top-[5cqw]">{up(4.8, "Customers message. Orders appear.", head)}</div>
         <div className="absolute left-[6cqw] top-[15cqw] flex w-[36cqw] flex-col gap-[1.4cqw] rounded-[2.4cqw] border border-[#2C292E] bg-[#19171A] p-[2cqw]">
           {bubbles.map(([me, text, t]) => (
             <p key={text} className={`max-w-[78%] px-[1.6cqw] py-[1cqw] text-[1.6cqw] ${rise(t)} ${me ? "self-end rounded-[1.4cqw] rounded-br-[.3cqw] bg-[#144D37]" : "self-start rounded-[1.4cqw] rounded-bl-[.3cqw] bg-[#2A272C]"}`}>{text}</p>
@@ -129,7 +129,7 @@ export default function Showreel() {
 
       {/* 3. Pipeline */}
       <div className={`scene ${s3}`}>
-        <div className="absolute left-[6cqw] top-[5cqw]"><Up t={10.4} className={head}>How a sale moves</Up></div>
+        <div className="absolute left-[6cqw] top-[5cqw]">{up(10.4, "How a sale moves", head)}</div>
         <svg viewBox="0 0 100 56.25" className="absolute inset-0 h-full w-full">
           {[0, 1, 2].map((i) => (
             <path key={i} d={`M${20.5 + i * 24} 30H${31.5 + i * 24}`} fill="none" stroke="#3A363C" strokeWidth=".5" />
@@ -148,7 +148,7 @@ export default function Showreel() {
             <circle key={t} cx="14" cy="30" r="1.3" fill="#D12A2A" className={an(t, t + 1.5, "opacity:0;transform:translateX(0)", "opacity:1;transform:translateX(72px)", "cubic-bezier(.5,0,.5,1)")} />
           ))}
         </svg>
-        <div className="absolute bottom-[5cqw] left-[6cqw] text-[2.6cqw] text-[#A8A2A6]"><Up t={13.6}>No customer waits. No order gets lost.</Up></div>
+        <div className="absolute bottom-[5cqw] left-[6cqw] text-[2.6cqw] text-[#A8A2A6]">{up(13.6, "No customer waits. No order gets lost.")}</div>
       </div>
 
       {/* 4. Websites wall */}
@@ -159,12 +159,12 @@ export default function Showreel() {
           <div className="overflow-hidden">{lane(4, "laneL")}</div>
         </div>
         <div className="absolute inset-y-0 left-0 w-[62cqw]" style={{ background: "linear-gradient(90deg,#0F0E10 45%,transparent)" }} />
-        <div className="absolute left-[6cqw] top-[16cqw] w-[44cqw]"><Up t={14.9} className={head}>Websites for real businesses</Up></div>
+        <div className="absolute left-[6cqw] top-[16cqw] w-[44cqw]">{up(14.9, "Websites for real businesses", head)}</div>
       </div>
 
       {/* 5. Code */}
       <div className={`scene ${s5}`}>
-        <div className="absolute left-[6cqw] top-[5cqw]"><Up t={19.3} className={head}>The code behind it</Up></div>
+        <div className="absolute left-[6cqw] top-[5cqw]">{up(19.3, "The code behind it", head)}</div>
         <div className={`absolute left-[6cqw] top-[16cqw] w-[54cqw] rounded-[1.4cqw] border border-[#2C292E] bg-[#19171A] p-[2.4cqw] font-[family-name:var(--font-geist-mono)] text-[2cqw] leading-[1.7] ${rise(19.5)}`}>
           <div className="mb-[1.6cqw] flex gap-[.6cqw]">{["#D12A2A", "#3A363C", "#3A363C"].map((c, i) => <span key={i} className="h-[1cqw] w-[1cqw] rounded-full" style={{ background: c }} />)}</div>
           {code.map((l, i) => (
@@ -183,9 +183,9 @@ export default function Showreel() {
       <div className={`scene ${s6}`}>
         <div className={`absolute inset-0 bg-[#D12A2A] ${an(22.6, 23.4, "clip-path:inset(0 100% 0 0)", "clip-path:inset(0 0 0 0)", "cubic-bezier(.7,0,.2,1)")}`} />
         <div className="absolute left-[6cqw] top-[15cqw] w-[84cqw] text-white">
-          <Up t={23.3} className="text-[7.4cqw] font-extrabold leading-[1] tracking-tighter">Let’s put your business on WhatsApp.</Up>
-          <div className="mt-[3cqw] text-[2.6cqw] font-semibold"><Up t={24}>adamfounder23@gmail.com</Up></div>
-          <div className="mt-[.6cqw] text-[1.8cqw] italic text-white/80"><Up t={24.3}>Growth Solutions by Adam</Up></div>
+          {up(23.3, "Let’s put your business on WhatsApp.", "text-[7.4cqw] font-extrabold leading-[1] tracking-tighter")}
+          <div className="mt-[3cqw] text-[2.6cqw] font-semibold">{up(24, "adamfounder23@gmail.com")}</div>
+          <div className="mt-[.6cqw] text-[1.8cqw] italic text-white/80">{up(24.3, "Growth Solutions by Adam")}</div>
         </div>
       </div>
 
@@ -217,7 +217,7 @@ export default function Showreel() {
         @keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
         .reel:hover *{animation-play-state:paused!important}
         @media (prefers-reduced-motion:reduce){.reel *{animation:none!important}.scene.first{opacity:1}}
-        ${css}
+        ${css.join("")}
       `}</style>
       <div className="h-full w-full" style={{ containerType: "inline-size" }}>
         <div className="relative h-full w-full" aria-hidden="true">{body}</div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Showreel from "../Showreel";
 
 export default function Home() {
   return (
@@ -61,6 +62,13 @@ export default function Home() {
           </a>
         </div>
       </header>
+
+      <section
+        aria-label="Showreel"
+        className="max-w-4xl mx-auto w-full px-6 py-10"
+      >
+        <Showreel />
+      </section>
 
       {/* BUSINESS SHOWCASE */}
       <section className="max-w-4xl mx-auto px-6 py-14 border-b border-[#27272A]">
