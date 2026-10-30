@@ -1,67 +1,12 @@
 import React from "react";
 import Showreel from "../Showreel";
+import AutomationHero from "./AutomationHero";
 
 export default function Home() {
   return (
-    <div className="bg-[#121214] text-[#E4E4E7] min-h-screen font-sans selection:bg-[#800020] selection:text-white">
-      {/* NAVIGATION BAR */}
-      <nav className="max-w-4xl mx-auto px-6 pt-8 flex justify-between items-center text-sm font-mono">
-        <span className="text-[#A31D1D] font-bold">&lt;Uncbatman /&gt;</span>
-        <div className="flex gap-6 text-[#A1A1AA]">
-          <a
-            href="https://www.linkedin.com/in/adam-mbori-65468b350"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/Uncbatman"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            GitHub
-          </a>
-          <a
-            href="mailto:adamfounder23@gmail.com"
-            className="hover:text-white transition-colors"
-          >
-            Email
-          </a>
-        </div>
-      </nav>
-
-      {/* HERO SECTION */}
-      <header className="max-w-4xl mx-auto px-6 pt-16 pb-12 border-b border-[#27272A]">
-        <h1 className="text-4xl font-bold text-white tracking-tight sm:text-5xl">
-          Adam Mbori
-        </h1>
-        <p className="mt-2 text-md font-mono text-[#A31D1D]">
-          Founder, WhatsApp Growth Solutions | AI Workflows & Integrations 
-        </p>
-        <p className="mt-6 text-lg text-[#A1A1AA] max-w-2xl leading-relaxed">
-          Software engineer specializing in interactive user interfaces & custom API integrations and AI Workflows & Integrations.  
-          I design automated dispatch tools, custom web apps, and serverless workflows that handle customer interactions instantly.
-        </p>
-        <div className="mt-8 flex gap-4">
-          <a
-            href="mailto:adamfounder23@gmail.com"
-            className="px-5 py-2.5 bg-[#A31D1D] hover:bg-[#b52222] text-white rounded-md text-sm font-medium transition-colors shadow-sm"
-          >
-            Work With Me
-          </a>
-          <a
-            href="https://github.com/Uncbatman"
-            target="_blank"
-            rel="noreferrer"
-            className="px-5 py-2.5 border border-[#3F3F46] hover:bg-[#18181B] text-[#A1A1AA] hover:text-white rounded-md text-sm font-medium transition-colors"
-          >
-            Explore Architecture
-          </a>
-        </div>
-      </header>
+    <div className="relative min-h-screen text-[#E4E4E7] font-sans selection:bg-[#800020] selection:text-white">
+      <AutomationHero />
+      <main className="relative z-[1] bg-[#121214]">
 
       <section
         aria-label="Showreel"
@@ -212,6 +157,7 @@ export default function Home() {
         <p>© 2026 Adam Mbori.</p>
         <p>Deployed via Vercel Edge.</p>
       </footer>
+      </main>
     </div>
   );
 }
