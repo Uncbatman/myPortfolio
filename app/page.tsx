@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen text-[#E4E4E7] font-sans selection:bg-[#800020] selection:text-white">
       <AutomationHero />
-      <main className="relative z-[1] bg-[#121214]">
+      <main className="portfolio-content relative z-[1]">
 
       {/* BUSINESS SHOWCASE */}
       <section className="max-w-4xl mx-auto px-6 py-14 border-b border-[#27272A]">
@@ -14,8 +14,15 @@ export default function Home() {
             <h2 className="text-xs font-semibold tracking-widest text-[#A1A1AA] uppercase">
               Core Business
             </h2>
-            <h3 className="text-2xl font-bold text-white mt-1">
-              WhatsApp Growth Solutions
+            <h3 className="mt-1 text-2xl font-bold text-white">
+              <a
+                className="growth-solutions-link"
+                href="https://growth-solutions-indol.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp Growth Solutions <span aria-hidden="true">↗</span>
+              </a>
             </h3>
           </div>
           <span className="text-xs font-mono px-3 py-1 bg-[#1A1A1E] text-[#A1A1AA] border border-[#27272A] rounded-full self-start md:self-auto">
@@ -26,6 +33,14 @@ export default function Home() {
         <p className="text-[#A1A1AA] mb-6 leading-relaxed">
           Transform your WhatsApp into a reliable sales channel. I set up automated response bots, custom order pipelines, and direct customer dispatch tools tailored to your business.
         </p>
+        <a
+          className="growth-solutions-cta"
+          href="https://growth-solutions-indol.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visit Growth Solutions <span aria-hidden="true">↗</span>
+        </a>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
