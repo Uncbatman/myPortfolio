@@ -31,7 +31,7 @@ export default function Home() {
         </div>
 
         <p className="text-[#A1A1AA] mb-6 leading-relaxed">
-          I set up WhatsApp Business, build fast one-page websites that send visitors straight to your chat, and create follow-ups that help turn more enquiries into sales.
+          We set up WhatsApp Business, build everything from informative to interactive websites, link your socials, and offer monthly customer follow-ups and website maintenance.
         </p>
         <a
           className="growth-solutions-cta"
@@ -50,15 +50,15 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">Fast One-Page Websites</h4>
+            <h4 className="font-semibold text-white mb-2">Informative to Interactive Websites</h4>
             <p className="text-sm text-[#A1A1AA]">
-              Phone-friendly one-page sites that load quickly and keep a WhatsApp chat button in reach, so visitors can message your business from any section.
+              From informative pages to interactive websites, we build what fits your business. We can also link your social media profiles so visitors can find and follow you.
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">Sales Follow-Ups</h4>
+            <h4 className="font-semibold text-white mb-2">Monthly Follow-Ups & Website Care</h4>
             <p className="text-sm text-[#A1A1AA]">
-              Timely reminders, broadcast messages, and Instagram links that bring interested customers back to the conversation when they’re ready to buy.
+              For a monthly fee, we follow up with customer enquiries and handle ongoing website maintenance and updates—keeping both your conversations and site on track.
             </p>
           </div>
         </div>
