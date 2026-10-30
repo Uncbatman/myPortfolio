@@ -1,158 +1,153 @@
-import React from "react";
-import AutomationHero from "./AutomationHero";
+import EditorialHero from "./EditorialHero";
+import ProjectMarquee from "./ProjectMarquee";
+import ProjectStack from "./ProjectStack";
+import { portfolioProjects } from "./project-data";
+
+const services = [
+  {
+    number: "01",
+    title: "Websites & digital experiences",
+    label: "DESIGN / DEVELOPMENT",
+    description:
+      "From the first sketch to the final details, I build expressive, responsive websites with strong visual direction and a clear purpose.",
+  },
+  {
+    number: "02",
+    title: "AI integrations",
+    label: "AI / APIS / TOOLING",
+    description:
+      "I connect AI models, APIs, and everyday tools to solve real problems—using AI where it adds value, not just for the novelty.",
+  },
+  {
+    number: "03",
+    title: "Automations & workflows",
+    label: "SYSTEMS / AUTOMATION",
+    description:
+      "I make repetitive work simpler by connecting systems and building thoughtful, dependable workflows around how people actually work.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen text-[#E4E4E7] font-sans selection:bg-[#800020] selection:text-white">
-      <AutomationHero />
-      <main className="portfolio-content relative z-[1]">
+    <main className="portfolio-page">
+      <EditorialHero />
+      <ProjectMarquee projects={portfolioProjects} />
 
-      {/* GROWTH SOLUTIONS SERVICES */}
-      <section className="max-w-4xl mx-auto px-6 py-14 border-b border-[#27272A]">
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-2">
-          <div>
-            <h2 className="text-xs font-semibold tracking-widest text-[#A1A1AA] uppercase">
-              Services
+      <section className="about-section page-section" id="about" aria-labelledby="about-title">
+        <div className="section-shell about-layout">
+          <div className="section-index">
+            <span>01</span>
+            <span>ABOUT ADAM</span>
+          </div>
+          <div className="about-copy">
+            <p className="section-eyebrow">A CREATIVE MIND, ALWAYS BUILDING</p>
+            <h2 className="editorial-heading" id="about-title">
+              Curiosity is how I get there.
             </h2>
-            <h3 className="mt-1 text-2xl font-bold text-white">
-              <a
-                className="growth-solutions-link"
-                href="https://growth-solutions-indol.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WhatsApp Growth Solutions <span aria-hidden="true">↗</span>
+            <p className="about-lead">
+              I&apos;m Adam Mbori—Uncbatman online. I love taking an idea from “what if?” to something real on the web.
+            </p>
+            <p className="about-body">
+              I build expressive websites, explore how AI can solve everyday problems, and connect tools into useful integrations and automations. I&apos;m always learning, reading, and testing a new idea. Away from the screen, I recharge outdoors and stay active with a workout. That curiosity follows me into everything I make.
+            </p>
+          </div>
+          <aside className="about-aside" aria-label="A few things that keep me curious">
+            <p className="aside-label">CURRENT OPERATING SYSTEM</p>
+            <ul className="interest-list">
+              <li><span>01</span> Keep learning</li>
+              <li><span>02</span> Read widely</li>
+              <li><span>03</span> Get outdoors</li>
+              <li><span>04</span> Move / train</li>
+            </ul>
+            <div className="about-business">
+              <span>ALSO BUILDING</span>
+              <a href="https://growth-solutions-indol.vercel.app/" target="_blank" rel="noreferrer">
+                Growth Solutions <span aria-hidden="true">↗</span>
               </a>
-            </h3>
-          </div>
-          <span className="text-xs font-mono px-3 py-1 bg-[#1A1A1E] text-[#A1A1AA] border border-[#27272A] rounded-full self-start md:self-auto">
-            WhatsApp · Websites · Follow-ups
-          </span>
+              <p>My business has its own home on the web; this space is about me and the things I love building.</p>
+            </div>
+          </aside>
         </div>
+      </section>
 
-        <p className="text-[#A1A1AA] mb-6 leading-relaxed">
-          We set up WhatsApp Business, build everything from informative to interactive websites, link your socials, and offer monthly customer follow-ups and website maintenance.
-        </p>
-        <a
-          className="growth-solutions-cta"
-          href="https://growth-solutions-indol.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Visit Growth Solutions <span aria-hidden="true">↗</span>
-        </a>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">WhatsApp Business Setup</h4>
-            <p className="text-sm text-[#A1A1AA]">
-              Product catalog, greeting and away messages, quick replies, and labels—set up so enquiries are easy to manage and customers get timely answers.
-            </p>
+      <section className="services-section page-section" id="services" aria-labelledby="services-title">
+        <div className="section-shell">
+          <div className="services-heading-row">
+            <div className="section-index section-index-dark">
+              <span>02</span>
+              <span>WHAT I LOVE TO BUILD</span>
+            </div>
+            <p className="services-heading-note">DESIGN WITH INTENTION. TECHNOLOGY WITH A REASON.</p>
           </div>
-          <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">Informative to Interactive Websites</h4>
-            <p className="text-sm text-[#A1A1AA]">
-              From informative pages to interactive websites, we build what fits your business. We can also link your social media profiles so visitors can find and follow you.
-            </p>
+          <h2 className="services-heading" id="services-title">Creative technology,<br />made useful.</h2>
+          <div className="service-list">
+            {services.map((service) => (
+              <article className="service-row" key={service.number}>
+                <span className="service-number">{service.number}</span>
+                <div className="service-copy">
+                  <div className="service-title-row">
+                    <h3>{service.title}</h3>
+                    <span>{service.label}</span>
+                  </div>
+                  <p>{service.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
-          <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">Monthly Follow-Ups & Website Care</h4>
-            <p className="text-sm text-[#A1A1AA]">
-              For a monthly fee, we follow up with customer enquiries and handle ongoing website maintenance and updates—keeping both your conversations and site on track.
-            </p>
+          <div className="services-endnote">
+            <span>IDEA → DESIGN → BUILD → LEARN → REPEAT</span>
+            <span className="services-end-mark" aria-hidden="true">✳</span>
           </div>
         </div>
       </section>
 
-      {/* TECHNICAL FEATURED BUILDS */}
-      <section className="max-w-4xl mx-auto px-6 py-14">
-        <h2 className="text-xs font-semibold tracking-widest text-[#A1A1AA] uppercase mb-8">
-          Open Source Systems
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Card 1: WhatsApp Storefront Chatbot */}
-          <div className="bg-[#18181B] border border-[#27272A] hover:border-[#3F3F46] p-6 rounded-lg transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-white">whatsapp-agent</h3>
-                <span className="text-xs font-mono px-2 py-1 bg-[#27272A] text-[#A1A1AA] rounded">
-                  Chatbot Engine
-                </span>
-              </div>
-              <p className="mt-3 text-sm text-[#A1A1AA] leading-relaxed">
-                  An automated WhatsApp ordering system that turns a phone number into an interactive online storefront. Built to handle session state, catalog items, and order logging.           
-               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
-                  Next.js
-                </span>
-                <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
-                  Vercel
-                </span>
-                <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
-                  Meta APIs
-                </span>
-              </div>
-            </div>
-            <div className="mt-6">
-              <a
-                href="https://github.com/Uncbatman/whatsapp-agent"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-semibold text-white hover:text-[#A31D1D] inline-flex items-center gap-1 transition-colors"
-              >
-                View Repository <span>→</span>
-              </a>
-            </div>
+      <section className="work-section page-section" id="work" aria-labelledby="work-title">
+        <div className="section-shell work-heading">
+          <div className="section-index">
+            <span>03</span>
+            <span>SELECTED PROJECTS</span>
           </div>
+          <div className="work-title-row">
+            <h2 className="editorial-heading" id="work-title">Made with<br />curiosity.</h2>
+            <p>Three pieces from my visual practice—each one a chance to explore, make, and push an idea further.</p>
+          </div>
+        </div>
+        <div className="section-shell">
+          <ProjectStack projects={portfolioProjects} />
+        </div>
+      </section>
 
-          {/* Card 2: Meta Dev Account Tool */}
-          <div className="bg-[#18181B] border border-[#27272A] hover:border-[#3F3F46] p-6 rounded-lg transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-white">
-                  whatsapp-accelerator
-                </h3>
-                <span className="text-xs font-mono px-2 py-1 bg-[#27272A] text-[#A1A1AA] rounded">
-                  Onboarding Tool
-                </span>
-              </div>
-              <p className="mt-3 text-sm text-[#A1A1AA] leading-relaxed">
-                A guided onboarding tool that helps non-technical business owners set up their Meta Developer account and API credentials without technical friction.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
-                  Automation
-                </span>
-                <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
-                  Node.js
-                </span>
-                <span className="text-xs text-[#D4D4D8] bg-[#27272A] px-2 py-1 rounded">
-                  Integration
-                </span>
-              </div>
-            </div>
-            <div className="mt-6">
-              <a
-                href="https://github.com/Uncbatman/whatsapp-accelerator"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-semibold text-white hover:text-[#A31D1D] inline-flex items-center gap-1 transition-colors"
-              >
-                View Repository <span>→</span>
-              </a>
-            </div>
+      <section className="contact-section page-section" id="contact" aria-labelledby="contact-title">
+        <div className="section-shell contact-layout">
+          <div className="section-index">
+            <span>04</span>
+            <span>THE NEXT IDEA</span>
+          </div>
+          <div className="contact-copy">
+            <p className="section-eyebrow">HAVE A GOOD PROBLEM?</p>
+            <h2 className="contact-heading" id="contact-title">Let&apos;s build<br />something useful.</h2>
+            <p className="contact-intro">
+              Have a website, AI integration, or automation idea? Tell me what you&apos;re imagining. I&apos;d love to help make it real.
+            </p>
+            <a
+              className="button button-light contact-button"
+              href="mailto:adamfounder23@gmail.com?subject=Let%27s%20build%20something%20together"
+            >
+              START A PROJECT <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="max-w-4xl mx-auto px-6 py-12 border-t border-[#27272A] flex justify-between text-xs text-[#71717A] font-mono">
-        <p>© 2026 Adam Mbori.</p>
-        <p>Deployed via Vercel Edge.</p>
+      <footer className="site-footer">
+        <a className="footer-brand" href="#top">ADAM MBORI <span>/ UNC BATMAN</span></a>
+        <div className="footer-links">
+          <a href="mailto:adamfounder23@gmail.com">EMAIL ↗</a>
+          <a href="https://www.linkedin.com/in/adam-mbori-65468b350" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
+          <a href="https://github.com/Uncbatman" target="_blank" rel="noreferrer">GITHUB ↗</a>
+        </div>
+        <span className="footer-copyright">© 2026 ADAM MBORI</span>
       </footer>
-      </main>
-    </div>
+    </main>
   );
 }

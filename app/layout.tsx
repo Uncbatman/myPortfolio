@@ -1,21 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const kanit = Kanit({
+  variable: "--font-kanit",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Adam Mbori | Growth Solutions",
+  metadataBase: new URL("https://my-portfolio-omega-sand-89.vercel.app"),
+  title: "Adam Mbori | Creative Developer & AI Builder",
   description:
-    "Growth Solutions by Adam sets up WhatsApp Business, builds fast one-page websites that send customers to chat, and creates follow-up systems for businesses across Kenya.",
+    "The personal portfolio of Adam Mbori (Uncbatman): creative websites, practical AI integrations, and automations built with curiosity.",
+  openGraph: {
+    title: "Adam Mbori | Creative Developer & AI Builder",
+    description:
+      "Creative websites, practical AI integrations, and automations—built with curiosity by Adam Mbori.",
+    type: "website",
+    images: ["/projects/nextlevel-3.webp"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adam Mbori | Creative Developer & AI Builder",
+    description:
+      "Creative websites, practical AI integrations, and automations—built with curiosity by Adam Mbori.",
+    images: ["/projects/nextlevel-3.webp"],
+  },
 };
 
 export default function RootLayout({
@@ -24,11 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${kanit.variable} h-full antialiased`}>
+      <body>{children}</body>
     </html>
   );
 }
