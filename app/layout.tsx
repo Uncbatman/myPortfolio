@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Adam Mbori | WhatsApp Growth Solutions",
+  title: "Adam Mbori | Growth Solutions",
   description:
-    "Adam Mbori builds WhatsApp sales systems, business websites, and automation workflows for small businesses.",
+    "Growth Solutions by Adam sets up WhatsApp Business, builds fast one-page websites that send customers to chat, and creates follow-up systems for businesses across Kenya.",
 };
 
 export default function RootLayout({

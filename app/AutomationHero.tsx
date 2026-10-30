@@ -2,7 +2,7 @@
 
 import { FadeUp } from "./FadeUp";
 
-const headlineWords = ["WE", "BUILD", "END-TO-END", "AI", "AUTOMATION", "SYSTEMS."];
+const headlineWords = ["WE", "TURN", "WHATSAPP", "CHATS", "INTO", "SALES."];
 
 export default function AutomationHero() {
   return (
@@ -55,7 +55,7 @@ export default function AutomationHero() {
           </h2>
 
           <FadeUp as="p" className="automation-hero-subtext" delay={0.9}>
-            We provide all-in-one AI automation services in one place.
+            WhatsApp setup, fast one-page websites, and sales follow-ups for businesses across Kenya.
           </FadeUp>
         </div>
       </section>

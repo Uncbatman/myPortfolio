@@ -7,12 +7,12 @@ export default function Home() {
       <AutomationHero />
       <main className="portfolio-content relative z-[1]">
 
-      {/* BUSINESS SHOWCASE */}
+      {/* GROWTH SOLUTIONS SERVICES */}
       <section className="max-w-4xl mx-auto px-6 py-14 border-b border-[#27272A]">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-2">
           <div>
             <h2 className="text-xs font-semibold tracking-widest text-[#A1A1AA] uppercase">
-              Core Business
+              Services
             </h2>
             <h3 className="mt-1 text-2xl font-bold text-white">
               <a
@@ -26,12 +26,12 @@ export default function Home() {
             </h3>
           </div>
           <span className="text-xs font-mono px-3 py-1 bg-[#1A1A1E] text-[#A1A1AA] border border-[#27272A] rounded-full self-start md:self-auto">
-            Consultancy & Automation
+            WhatsApp · Websites · Follow-ups
           </span>
         </div>
 
         <p className="text-[#A1A1AA] mb-6 leading-relaxed">
-          Transform your WhatsApp into a reliable sales channel. I set up automated response bots, custom order pipelines, and direct customer dispatch tools tailored to your business.
+          I set up WhatsApp Business, build fast one-page websites that send visitors straight to your chat, and create follow-ups that help turn more enquiries into sales.
         </p>
         <a
           className="growth-solutions-cta"
@@ -42,35 +42,23 @@ export default function Home() {
           Visit Growth Solutions <span aria-hidden="true">↗</span>
         </a>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">
-              Infrastructure Setup
-            </h4>
+            <h4 className="font-semibold text-white mb-2">WhatsApp Business Setup</h4>
             <p className="text-sm text-[#A1A1AA]">
-              Complete Meta Cloud API integration, WABA business verification, and automated catalog deployment.
+              Product catalog, greeting and away messages, quick replies, and labels—set up so enquiries are easy to manage and customers get timely answers.
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">Conversational AI</h4>
+            <h4 className="font-semibold text-white mb-2">Fast One-Page Websites</h4>
             <p className="text-sm text-[#A1A1AA]">
-              Automated chatbots designed to handle customer inquiries, deliver instant replies, and convert leads.
+              Phone-friendly one-page sites that load quickly and keep a WhatsApp chat button in reach, so visitors can message your business from any section.
             </p>
           </div>
           <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">
-              Workflow Automation
-            </h4>
+            <h4 className="font-semibold text-white mb-2">Sales Follow-Ups</h4>
             <p className="text-sm text-[#A1A1AA]">
-              Connect your messaging apps directly to cloud databases and CRMs using lightweight serverless functions.
-            </p>
-          </div>
-          <div className="bg-[#18181B] border border-[#27272A] p-5 rounded-lg">
-            <h4 className="font-semibold text-white mb-2">
-              Broadcast Marketing
-            </h4>
-            <p className="text-sm text-[#A1A1AA]">
-              Designing compliant Meta message templates and opt-in strategies that drive high open rates and keep subscriber lists active.
+              Timely reminders, broadcast messages, and Instagram links that bring interested customers back to the conversation when they’re ready to buy.
             </p>
           </div>
         </div>
