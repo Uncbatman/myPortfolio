@@ -4,6 +4,8 @@
 :root {
   --background: #121214;
   --foreground: #ededed;
+  --portfolio-burgundy: #a31d1d;
+  --portfolio-burgundy-bright: #d26363;
 }
 
 @theme inline {
@@ -38,6 +40,17 @@ body {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  filter: brightness(0.76) saturate(0.88);
+  pointer-events: none;
+}
+
+.hero-video-tint {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(18, 18, 20, 0.48) 0%, rgba(18, 18, 20, 0.12) 76%),
+    linear-gradient(180deg, rgba(18, 18, 20, 0.2) 0%, transparent 32%, rgba(128, 0, 32, 0.15) 100%);
   pointer-events: none;
 }
 
@@ -58,22 +71,42 @@ body {
   left: 32px;
   z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   color: #fff;
   font-size: 14px;
 }
 
 .hero-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   color: #fff;
-  font-weight: 700;
   text-decoration: none;
+}
+
+.hero-brand-name {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero-brand-alias {
+  color: var(--portfolio-burgundy-bright);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .hero-nav-links {
   display: flex;
   align-items: center;
   gap: 24px;
+  padding-top: 5px;
 }
 
 .hero-nav-links a {
@@ -83,8 +116,8 @@ body {
 }
 
 .hero-nav-links a:hover,
-.hero-brand:hover {
-  color: #fff;
+.hero-brand:hover .hero-brand-name {
+  color: var(--portfolio-burgundy-bright);
 }
 
 .automation-hero-content {
@@ -105,7 +138,7 @@ body {
   line-height: 1.08;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.28);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.34);
 }
 
 .automation-hero-word {
@@ -116,10 +149,10 @@ body {
 .automation-hero-subtext {
   max-width: 260px;
   margin: 24px 0 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 14px;
   line-height: 1.65;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.32);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
 }
 
 @media (max-width: 900px) {
@@ -132,6 +165,10 @@ body {
     right: 18px;
     left: 18px;
     font-size: 12px;
+  }
+
+  .hero-brand-name {
+    font-size: 22px;
   }
 
   .hero-nav-links {

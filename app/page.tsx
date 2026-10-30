@@ -1,5 +1,4 @@
 import React from "react";
-import Showreel from "../Showreel";
 import AutomationHero from "./AutomationHero";
 
 export default function Home() {
@@ -7,13 +6,6 @@ export default function Home() {
     <div className="relative min-h-screen text-[#E4E4E7] font-sans selection:bg-[#800020] selection:text-white">
       <AutomationHero />
       <main className="relative z-[1] bg-[#121214]">
-
-      <section
-        aria-label="Showreel"
-        className="max-w-4xl mx-auto w-full px-6 py-10"
-      >
-        <Showreel />
-      </section>
 
       {/* BUSINESS SHOWCASE */}
       <section className="max-w-4xl mx-auto px-6 py-14 border-b border-[#27272A]">

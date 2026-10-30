@@ -21,11 +21,13 @@ export default function AutomationHero() {
           type="video/mp4"
         />
       </video>
+      <div className="hero-video-tint" aria-hidden="true" />
 
       <section id="top" className="automation-hero" aria-labelledby="automation-heading">
         <nav className="hero-nav" aria-label="Primary navigation">
-          <a className="hero-brand" href="#top" aria-label="Uncbatman home">
-            &lt;Uncbatman /&gt;
+          <a className="hero-brand" href="#top" aria-label="Adam Mbori, also known as Uncbatman">
+            <span className="hero-brand-name">Adam Mbori</span>
+            <span className="hero-brand-alias">Uncbatman</span>
           </a>
           <div className="hero-nav-links">
             <a href="https://www.linkedin.com/in/adam-mbori-65468b350" target="_blank" rel="noreferrer">
