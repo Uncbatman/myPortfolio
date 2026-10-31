@@ -1,31 +1,17 @@
-"use client";
-
 import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef, type CSSProperties } from "react";
+import type { CSSProperties } from "react";
 import type { PortfolioProject } from "./project-data";
 
 const contactEmail = "adamfounder23@gmail.com";
 
 function ProjectCard({ project, index }: { project: PortfolioProject; index: number }) {
-  const shellRef = useRef<HTMLDivElement>(null);
-  const reduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: shellRef,
-    offset: ["start end", "end start"],
-  });
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.34, 1],
-    reduceMotion ? [1, 1, 1] : [0.94, 1, 0.96],
-  );
   const subject = encodeURIComponent(`Project enquiry: ${project.name}`);
   const stackStyle = { "--stack-index": index } as CSSProperties;
 
   return (
-    <div ref={shellRef} className="project-card-shell" style={stackStyle}>
+    <div className="project-card-shell" style={stackStyle}>
       <div className="project-card-sticky">
-        <motion.article className="project-card" style={{ scale }}>
+        <article className="project-card">
           <div className="project-card-heading">
             <span className="project-number">{project.number}</span>
             <div className="project-title-block">
@@ -43,8 +29,8 @@ function ProjectCard({ project, index }: { project: PortfolioProject; index: num
                   alt={`${project.name} project visual one`}
                   width={1280}
                   height={956}
-                  sizes="(max-width: 700px) 45vw, 30vw"
-                  quality={82}
+                  sizes="(max-width: 700px) 30vw, (max-width: 1200px) 18vw, 250px"
+                  quality={75}
                 />
               </div>
               <div className="project-image-frame project-image-small">
@@ -53,8 +39,8 @@ function ProjectCard({ project, index }: { project: PortfolioProject; index: num
                   alt={`${project.name} project visual two`}
                   width={1280}
                   height={956}
-                  sizes="(max-width: 700px) 45vw, 30vw"
-                  quality={82}
+                  sizes="(max-width: 700px) 30vw, (max-width: 1200px) 18vw, 250px"
+                  quality={75}
                 />
               </div>
             </div>
@@ -64,8 +50,8 @@ function ProjectCard({ project, index }: { project: PortfolioProject; index: num
                 alt={`${project.name} project visual three`}
                 width={1280}
                 height={956}
-                sizes="(max-width: 700px) 48vw, 55vw"
-                quality={82}
+                sizes="(max-width: 700px) 45vw, (max-width: 1200px) 50vw, 700px"
+                quality={75}
               />
             </div>
           </div>
@@ -76,7 +62,7 @@ function ProjectCard({ project, index }: { project: PortfolioProject; index: num
               BUILD SOMETHING LIKE THIS <span aria-hidden="true">↗</span>
             </a>
           </div>
-        </motion.article>
+        </article>
       </div>
     </div>
   );

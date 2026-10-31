@@ -1,3 +1,5 @@
+import HeroBackgroundVideo from "./HeroBackgroundVideo";
+import ThemeToggle from "./ThemeToggle";
 import TypewriterText from "./TypewriterText";
 
 const emailSubject = encodeURIComponent("Let's build something together");
@@ -5,18 +7,7 @@ const emailSubject = encodeURIComponent("Let's build something together");
 export default function EditorialHero() {
   return (
     <header className="portfolio-hero" id="top">
-      <video
-        className="hero-film"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        aria-hidden="true"
-        tabIndex={-1}
-      >
-        <source src="/automation-video-loop.mp4" type="video/mp4" />
-      </video>
+      <HeroBackgroundVideo />
       <div className="hero-film-wash" aria-hidden="true" />
       <div className="hero-graphic" aria-hidden="true">
         <span />
@@ -36,6 +27,7 @@ export default function EditorialHero() {
             <a href="#work">WORK</a>
             <a href="#contact">CONTACT</a>
           </div>
+          <ThemeToggle />
         </nav>
 
         <div className="hero-content">
