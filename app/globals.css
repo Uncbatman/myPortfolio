@@ -216,9 +216,34 @@ button:focus-visible {
   transition: color 180ms ease;
 }
 
+.footer-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 11px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: rgba(247, 247, 244, 0.78);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
 .nav-links a:hover,
 .footer-links a:hover {
   color: var(--accent-bright);
+}
+
+.footer-links a:hover {
+  border-color: var(--accent-bright);
+  background: rgba(247, 247, 244, 0.06);
+}
+
+.footer-links a:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
 }
 
 .hero-content {
@@ -1019,7 +1044,9 @@ button:focus-visible {
 
 .footer-links {
   display: flex;
-  gap: clamp(13px, 2vw, 30px);
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .footer-copyright {
@@ -1495,6 +1522,9 @@ button:focus-visible {
   .footer-links {
     order: 3;
     width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }
 
