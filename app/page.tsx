@@ -2,16 +2,6 @@ import EditorialHero from "./EditorialHero";
 import BuildLab from "./BuildLab";
 import WebsiteDemo from "./WebsiteDemo";
 
-const services = [
-  {
-    number: "01",
-    title: "Websites & digital experiences",
-    label: "DESIGN / DEVELOPMENT",
-    description:
-      "From the first sketch to the final details, I build expressive, responsive websites with strong visual direction and a clear purpose.",
-  },
-];
-
 export default function Home() {
   return (
     <main className="portfolio-page">
@@ -58,26 +48,27 @@ export default function Home() {
               <span>02</span>
               <span>WHAT I LOVE TO BUILD</span>
             </div>
-            <p className="services-heading-note">DESIGN WITH INTENTION. TECHNOLOGY WITH A REASON.</p>
+            <p className="services-heading-note">WEB DESIGN / DIGITAL EXPERIENCES</p>
           </div>
-          <h2 className="services-heading" id="services-title">Creative technology,<br />made useful.</h2>
-          <div className="service-list">
-            {services.map((service) => (
-              <article className="service-row" key={service.number}>
-                <span className="service-number">{service.number}</span>
-                <div className="service-copy">
-                  <div className="service-title-row">
-                    <h3>{service.title}</h3>
-                    <span>{service.label}</span>
-                  </div>
-                  <p className="paragraph-panel">{service.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="services-endnote">
-            <span>IDEA → DESIGN → BUILD → LEARN → REPEAT</span>
-            <span className="services-end-mark" aria-hidden="true">✳</span>
+          <div className="services-feature-layout">
+            <div className="services-heading-wrap">
+              <h2 className="services-heading" id="services-title">
+                Creative technology, made useful.
+              </h2>
+            </div>
+            <article className="service-feature">
+              <div className="service-feature-meta">
+                <span>01 / MY FOCUS</span>
+                <span>DESIGN + DEVELOPMENT</span>
+              </div>
+              <h3 className="service-feature-title">Websites &amp; digital experiences</h3>
+              <p className="paragraph-panel service-feature-copy">
+                Distinctive, responsive websites that make a strong first impression and help people take the next step.
+              </p>
+              <a className="service-feature-link" href="#work">
+                EXPLORE THE INTERACTIVE PREVIEW <span aria-hidden="true">↗</span>
+              </a>
+            </article>
           </div>
         </div>
       </section>
