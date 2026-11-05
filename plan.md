@@ -11,9 +11,12 @@ Keep the overall portfolio black, white, and neutral while letting the interacti
 3. **Remove service entries:** Removed the “AI integrations” and “Automations & workflows” service rows, retaining “Websites & digital experiences.” Other project/build content remains unchanged.
 4. **Clear CTA:** Preserved the high-contrast CTA treatment and increased the preview CTA label to 16px, its minimum height to 56px, and supporting note text to 14px.
 
-## Phase 2 — Continue later
+## Phase 2 — Responsive and interaction polish (complete)
 
-Refine secondary spacing and typography, inspect the six color presets at narrow and wide breakpoints, and adjust additional interaction or reduced-motion details only if needed. These are polish items and can be handled in a later session.
+- On phones, show all six palette controls in a two-column grid rather than hiding later choices in a horizontal strip. Controls have a 48px minimum tap height.
+- Increase supporting preview text to a 12px minimum in the mock cards and small print, use a 16px business-name input to prevent mobile browser zoom, and keep the demo CTA at 16px.
+- Use proximity scroll snapping for the wider picker and disable it under reduced-motion preferences; palette transitions also honor reduced motion.
+- Keep focus-visible outlines and pressed-state semantics for keyboard operation of the style buttons.
 
 ## Implementation approach and project structure
 
@@ -21,4 +24,4 @@ No new dependencies or assets were needed. The preview and its isolated styling 
 
 ## Current validation
 
-`npm run lint`, `npm run build`, and `git diff --check` pass. Phase 2 remains deferred.
+`npm run lint`, `npm run build`, and `git diff --check` pass.

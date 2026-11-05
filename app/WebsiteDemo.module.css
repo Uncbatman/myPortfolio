@@ -29,7 +29,7 @@
   background: #f7f7f5;
   color: #151515;
   padding: 16px 18px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -43,7 +43,7 @@
   display: block;
   margin-bottom: 7px;
   color: var(--demo-ink);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -57,7 +57,7 @@
   color: var(--demo-ink);
   padding: 0 15px;
   font: inherit;
-  font-size: 15px;
+  font-size: 16px;
   transition: border-color 180ms ease, background-color 180ms ease;
 }
 
@@ -82,6 +82,8 @@
   gap: 8px;
   overflow-x: auto;
   padding: 2px 2px 9px;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 2px;
   scrollbar-width: thin;
   scrollbar-color: rgba(247, 247, 245, 0.4) transparent;
 }
@@ -90,6 +92,7 @@
   display: inline-flex;
   min-height: 44px;
   flex: 0 0 auto;
+  scroll-snap-align: start;
   align-items: center;
   gap: 9px;
   border: 1px solid rgba(247, 247, 245, 0.24);
@@ -98,7 +101,7 @@
   color: var(--demo-ink);
   padding: 0 15px;
   font: inherit;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
@@ -136,7 +139,7 @@
 .bestFor span {
   margin-right: 7px;
   color: #666660;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
@@ -176,7 +179,7 @@
   overflow: hidden;
   margin-left: 4px;
   color: rgba(247, 247, 245, 0.56);
-  font-size: 11px;
+  font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -250,7 +253,7 @@
   background: var(--preview-accent);
   color: var(--preview-accent-ink);
   padding: 9px 13px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -286,7 +289,7 @@
   background: var(--preview-accent);
   color: var(--preview-accent-ink);
   padding: 0 18px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -315,7 +318,7 @@
 
 .mockCards p {
   margin: 0;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   opacity: 0.78;
 }
@@ -381,7 +384,7 @@
 .demoFootnote {
   margin: 20px 0 0;
   color: var(--demo-muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -409,10 +412,18 @@
     font-size: 14px;
   }
 
+  .stylePicker {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+  }
+
   .stylePicker button {
-    min-height: 42px;
+    width: 100%;
+    min-height: 48px;
+    justify-content: flex-start;
     padding-inline: 12px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .websiteMockup {
@@ -426,7 +437,7 @@
 
   .mockNavAction {
     padding: 8px 10px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .mockHero {
@@ -439,7 +450,7 @@
 
   .mockHero p {
     max-width: 34ch;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .mockCards {
@@ -458,7 +469,7 @@
   }
 
   .mockCards p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .demoCta {
@@ -472,6 +483,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .stylePicker {
+    scroll-snap-type: none;
+  }
+
   .websiteMockup,
   .websiteMockup *,
   .demo * {
