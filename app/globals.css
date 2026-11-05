@@ -2,14 +2,16 @@
 
 :root {
   --ink: #0c0c0c;
-  --paper: #f4f3ef;
-  --white: #f7f7f4;
+  --paper: #f2f2ef;
+  --white: #f8f8f6;
   --muted: #a6a6a0;
   --muted-dark: #575752;
   --rule: rgba(247, 247, 244, 0.2);
   --rule-dark: rgba(12, 12, 12, 0.18);
-  --accent: #a31d1d;
-  --accent-bright: #d26363;
+  --accent: #b5b5b0;
+  --accent-bright: #e0e0dc;
+  --paragraph-paper: #f8f8f6;
+  --paragraph-ink: #141414;
   --font-editorial: var(--font-kanit), "Arial Narrow", Arial, sans-serif;
 }
 
@@ -125,7 +127,7 @@ button:focus-visible {
 
 .hero-graphic span:nth-child(2) {
   inset: 17% 13% 2% 5%;
-  border-color: rgba(210, 99, 99, 0.46);
+  border-color: rgba(247, 247, 244, 0.28);
   transform: rotate(36deg);
 }
 
@@ -270,7 +272,7 @@ button:focus-visible {
   height: 7px;
   border-radius: 50%;
   background: var(--accent-bright);
-  box-shadow: 0 0 16px rgba(210, 99, 99, 0.72);
+  box-shadow: 0 0 16px rgba(247, 247, 244, 0.34);
 }
 
 .hero-name {
@@ -366,7 +368,7 @@ button:focus-visible {
 .button-light:hover {
   border-color: var(--accent-bright);
   background: var(--accent-bright);
-  color: #fff;
+  color: var(--ink);
 }
 
 .button-quiet {
@@ -932,7 +934,7 @@ button:focus-visible {
 
 .experiment-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(210, 99, 99, 0.7);
+  border-color: rgba(247, 247, 244, 0.56);
   background: rgba(247, 247, 244, 0.035);
 }
 
@@ -1674,14 +1676,15 @@ button:focus-visible {
 
 html[data-theme="light"] {
   color-scheme: light;
-  --ink: #f4f2ec;
-  --paper: #e8e6df;
+  --ink: #f5f5f2;
+  --paper: #e7e7e4;
   --white: #171716;
   --muted: #5d5b55;
   --muted-dark: #595750;
   --rule: rgba(12, 12, 12, 0.18);
   --rule-dark: rgba(12, 12, 12, 0.16);
-  --accent-bright: #963030;
+  --accent: #686865;
+  --accent-bright: #555552;
 }
 
 html[data-theme="light"] .hero-film,
@@ -1694,7 +1697,7 @@ html[data-theme="light"] .hero-graphic span {
 }
 
 html[data-theme="light"] .hero-graphic span:nth-child(2) {
-  border-color: rgba(150, 48, 48, 0.34);
+  border-color: rgba(85, 85, 82, 0.3);
 }
 
 html[data-theme="light"] .hero-graphic span:nth-child(3) {
@@ -1775,4 +1778,107 @@ html[data-theme="light"] .nav-links a:hover,
 html[data-theme="light"] .footer-links a:hover,
 html[data-theme="light"] .section-index > span:first-child {
   color: var(--accent-bright);
+}
+
+
+/* Premium neutral direction: reserve bright paper surfaces for paragraph copy. */
+.paragraph-panel {
+  display: table;
+  max-width: 100%;
+  border: 1px solid rgba(12, 12, 12, 0.08);
+  background: var(--paragraph-paper);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+  color: var(--paragraph-ink);
+  padding: 13px 16px;
+  font-weight: 400;
+  line-height: 1.68;
+}
+
+.hero-intro.paragraph-panel {
+  max-width: min(540px, 100%);
+  margin-top: clamp(16px, 2.3vw, 27px);
+  font-size: clamp(15px, 1.6vw, 20px);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.about-summary.paragraph-panel {
+  max-width: 800px;
+  margin: 30px 0 0;
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.75;
+}
+
+.about-business > p.paragraph-panel {
+  max-width: 100%;
+  margin: 5px 0 0;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.service-copy > p.paragraph-panel {
+  max-width: 760px;
+  margin: 13px 0 0;
+  font-size: clamp(14px, 1.3vw, 17px);
+}
+
+.work-title-row > p.paragraph-panel {
+  max-width: 430px;
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.build-lab-heading > p.paragraph-panel {
+  max-width: 430px;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.experiment-description.paragraph-panel {
+  max-width: 540px;
+  margin: 10px 0 25px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.contact-intro.paragraph-panel {
+  max-width: 560px;
+  margin: 27px 0 24px;
+  font-size: clamp(16px, 1.55vw, 20px);
+}
+
+html[data-theme="light"] .paragraph-panel {
+  border-color: rgba(12, 12, 12, 0.08);
+  background: var(--paragraph-paper);
+  color: var(--paragraph-ink);
+}
+
+@media (max-width: 760px) {
+  .about-summary.paragraph-panel {
+    margin-top: 23px;
+  }
+
+  .work-title-row > p.paragraph-panel {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .paragraph-panel {
+    padding: 12px 13px;
+  }
+
+  .about-summary.paragraph-panel {
+    font-size: 15px;
+  }
+
+  .service-copy > p.paragraph-panel {
+    font-size: 14px;
+  }
+
+  .contact-intro.paragraph-panel {
+    font-size: 15px;
+  }
 }

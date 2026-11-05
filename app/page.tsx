@@ -1,7 +1,6 @@
 import EditorialHero from "./EditorialHero";
-import ProjectMarquee from "./ProjectMarquee";
-import ProjectStack from "./ProjectStack";
-import { portfolioProjects } from "./project-data";
+import BuildLab from "./BuildLab";
+import WebsiteDemo from "./WebsiteDemo";
 
 const services = [
   {
@@ -31,7 +30,6 @@ export default function Home() {
   return (
     <main className="portfolio-page">
       <EditorialHero />
-      <ProjectMarquee projects={portfolioProjects} />
 
       <section className="about-section page-section" id="about" aria-labelledby="about-title">
         <div className="section-shell about-layout">
@@ -44,12 +42,9 @@ export default function Home() {
             <h2 className="editorial-heading" id="about-title">
               Curiosity is how I get there.
             </h2>
-            <p className="about-lead">
-              I&apos;m Adam Mbori—Uncbatman online. I love taking an idea from “what if?” to something real on the web.
-            </p>
-            <p className="about-body">
-              I build expressive websites, explore how AI can solve everyday problems, and connect tools into useful integrations and automations. I&apos;m always learning, reading, and testing a new idea. Away from the screen, I recharge outdoors and stay active with a workout. That curiosity follows me into everything I make.
-            </p>
+              <p className="about-summary paragraph-panel">
+                I&apos;m Adam Mbori—Uncbatman online. I turn curious ideas into expressive websites, practical AI integrations, and useful automations. I&apos;m always learning, reading, and testing new ideas; away from the screen, I recharge outdoors and stay active.
+              </p>
           </div>
           <aside className="about-aside" aria-label="A few things that keep me curious">
             <p className="aside-label">CURRENT OPERATING SYSTEM</p>
@@ -64,7 +59,7 @@ export default function Home() {
               <a href="https://growth-solutions-indol.vercel.app/" target="_blank" rel="noreferrer">
                 Growth Solutions <span aria-hidden="true">↗</span>
               </a>
-              <p>My business has its own home on the web; this space is about me and the things I love building.</p>
+              <p className="paragraph-panel">My business has its own home on the web; this space is about me and the things I love building.</p>
             </div>
           </aside>
         </div>
@@ -89,7 +84,7 @@ export default function Home() {
                     <h3>{service.title}</h3>
                     <span>{service.label}</span>
                   </div>
-                  <p>{service.description}</p>
+                  <p className="paragraph-panel">{service.description}</p>
                 </div>
               </article>
             ))}
@@ -105,15 +100,16 @@ export default function Home() {
         <div className="section-shell work-heading">
           <div className="section-index">
             <span>03</span>
-            <span>SELECTED PROJECTS</span>
+                <span>INTERACTIVE WEBSITE PREVIEW</span>
           </div>
           <div className="work-title-row">
-            <h2 className="editorial-heading" id="work-title">Made with<br />curiosity.</h2>
-            <p>Three pieces from my visual practice—each one a chance to explore, make, and push an idea further.</p>
+            <h2 className="editorial-heading" id="work-title">See what your site<br />could become.</h2>
+            <p className="paragraph-panel">Enter a business name and compare six distinct directions for a polished small-business website. When one feels right, ask me for a free preview of your own.</p>
           </div>
         </div>
         <div className="section-shell">
-          <ProjectStack projects={portfolioProjects} />
+          <WebsiteDemo />
+          <BuildLab />
         </div>
       </section>
 
@@ -126,7 +122,7 @@ export default function Home() {
           <div className="contact-copy">
             <p className="section-eyebrow">HAVE A GOOD PROBLEM?</p>
             <h2 className="contact-heading" id="contact-title">Let&apos;s build<br />something useful.</h2>
-            <p className="contact-intro">
+            <p className="contact-intro paragraph-panel">
               Have a website, AI integration, or automation idea? Tell me what you&apos;re imagining. I&apos;d love to help make it real.
             </p>
             <a

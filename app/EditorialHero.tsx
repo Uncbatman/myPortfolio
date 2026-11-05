@@ -43,11 +43,11 @@ export default function EditorialHero() {
               delay={900}
             />
           </p>
-          <p className="hero-intro">
+          <p className="hero-intro paragraph-panel">
             I turn curious ideas into memorable websites, useful AI integrations, and automations that make digital work better.
           </p>
           <div className="hero-actions">
-            <a className="button button-light" href="https://wa.me/254792305846">
+            <a className="button button-light" href="https://wa.me/254792120237">
               START A PROJECT <span aria-hidden="true">↗</span>
             </a>
             <a className="button button-quiet" href="#work">
