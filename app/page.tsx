@@ -10,20 +10,6 @@ const services = [
     description:
       "From the first sketch to the final details, I build expressive, responsive websites with strong visual direction and a clear purpose.",
   },
-  {
-    number: "02",
-    title: "AI integrations",
-    label: "AI / APIS / TOOLING",
-    description:
-      "I connect AI models, APIs, and everyday tools to solve real problems—using AI where it adds value, not just for the novelty.",
-  },
-  {
-    number: "03",
-    title: "Automations & workflows",
-    label: "SYSTEMS / AUTOMATION",
-    description:
-      "I make repetitive work simpler by connecting systems and building thoughtful, dependable workflows around how people actually work.",
-  },
 ];
 
 export default function Home() {
@@ -42,9 +28,9 @@ export default function Home() {
             <h2 className="editorial-heading" id="about-title">
               Curiosity is how I get there.
             </h2>
-              <p className="about-summary paragraph-panel">
-                I&apos;m Adam Mbori—Uncbatman online. I turn curious ideas into expressive websites, practical AI integrations, and useful automations. I&apos;m always learning, reading, and testing new ideas; away from the screen, I recharge outdoors and stay active.
-              </p>
+            <p className="about-summary paragraph-panel">
+              I&apos;m Adam Mbori—Uncbatman online. I turn curious ideas into expressive websites, practical AI integrations, and useful automations. I&apos;m always learning, reading, and testing new ideas; away from the screen, I recharge outdoors and stay active.
+            </p>
           </div>
           <aside className="about-aside" aria-label="A few things that keep me curious">
             <p className="aside-label">CURRENT OPERATING SYSTEM</p>
@@ -100,7 +86,7 @@ export default function Home() {
         <div className="section-shell work-heading">
           <div className="section-index">
             <span>03</span>
-                <span>INTERACTIVE WEBSITE PREVIEW</span>
+            <span>INTERACTIVE WEBSITE PREVIEW</span>
           </div>
           <div className="work-title-row">
             <h2 className="editorial-heading" id="work-title">See what your site<br />could become.</h2>
