@@ -53,7 +53,7 @@ export default function Home() {
           <div className="services-feature-layout">
             <div className="services-heading-wrap">
               <h2 className="services-heading" id="services-title">
-                Creative technology, made useful.
+                Design-led.<br />Built to work.
               </h2>
             </div>
             <article className="service-feature">
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
               <h3 className="service-feature-title">Websites &amp; digital experiences</h3>
               <p className="paragraph-panel service-feature-copy">
-                Distinctive, responsive websites that make a strong first impression and help people take the next step.
+                I build expressive, mobile-ready websites that make your offer clear and give customers an easy next step.
               </p>
               <a className="service-feature-link" href="#work">
                 EXPLORE THE INTERACTIVE PREVIEW <span aria-hidden="true">↗</span>
