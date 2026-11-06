@@ -32,7 +32,7 @@ export default function EditorialHero() {
 
         <div className="hero-content">
           <h1 className="hero-name">
-            <TypewriterText text="Adam Mbori.." className="hero-name-type" speed={74} delay={180} />
+            <TypewriterText text="Adam Mbori" className="hero-name-type" speed={74} delay={180} />
           </h1>
           <p className="hero-role">
             <TypewriterText
