@@ -3,14 +3,14 @@ const experiments = [
     name: "whatsapp-agent",
     label: "CONVERSATION AUTOMATION",
     description:
-      "An automated ordering flow that turns a business number into an interactive storefront, with product browsing and order logging.",
+      "Lets customers browse products and place orders through WhatsApp, while keeping each order organized for the business.",
     href: "https://github.com/Uncbatman/whatsapp-agent",
   },
   {
     name: "whatsapp-accelerator",
     label: "API INTEGRATION / ONBOARDING",
     description:
-      "A guided onboarding tool designed to make Meta developer setup and API credentials easier for non-technical business owners.",
+      "Guides business owners through setting up WhatsApp tools with clear steps, making the process easier even without a technical background.",
     href: "https://github.com/Uncbatman/whatsapp-accelerator",
   },
 ];

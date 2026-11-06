@@ -36,7 +36,7 @@ export const portfolioProjects: PortfolioProject[] = [
     name: "Solaris Digital",
     category: "CLIENT WEBSITE",
     description:
-      "A client digital project built around vivid imagery and an optimistic, memorable online presence.",
+      "A client digital project built around vivid imagery and an optimistic, distinctive online presence.",
     images: [
       "/projects/solaris-1.webp",
       "/projects/solaris-2.webp",

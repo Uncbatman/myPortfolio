@@ -113,13 +113,13 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
-        <a className="footer-brand" href="#top">ADAM MBORI <span>/ UNC BATMAN</span></a>
+        <a className="footer-brand" href="#top">ADAM MBORI.. <span>/ UNC BATMAN</span></a>
         <div className="footer-links">
           <a href="mailto:adamfounder23@gmail.com">EMAIL ↗</a>
           <a href="https://www.linkedin.com/in/adam-mbori-65468b350" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
           <a href="https://github.com/Uncbatman" target="_blank" rel="noreferrer">GITHUB ↗</a>
         </div>
-        <span className="footer-copyright">© 2026 ADAM MBORI</span>
+        <span className="footer-copyright">© 2026 ADAM MBORI..</span>
       </footer>
     </main>
   );

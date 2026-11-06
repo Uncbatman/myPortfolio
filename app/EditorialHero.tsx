@@ -31,7 +31,6 @@ export default function EditorialHero() {
         </nav>
 
         <div className="hero-content">
-          <p className="hero-overline"><span className="red-dot" /> PERSONAL PORTFOLIO / 2026</p>
           <h1 className="hero-name">
             <TypewriterText text="Adam Mbori" className="hero-name-type" speed={74} delay={180} />
           </h1>
@@ -44,7 +43,7 @@ export default function EditorialHero() {
             />
           </p>
           <p className="hero-intro paragraph-panel">
-            I turn curious ideas into memorable websites, useful AI integrations, and automations that make digital work better.
+            I build clear, distinctive websites, practical AI tools, and automations that help businesses serve customers and work more smoothly.
           </p>
           <div className="hero-actions">
             <a className="button button-light" href="https://wa.me/254792120237">
