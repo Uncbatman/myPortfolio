@@ -36,7 +36,7 @@ export default function EditorialHero() {
           </h1>
           <p className="hero-role">
             <TypewriterText
-              text="When customers have to guess, they move on."
+              text="Unc batman - A creative obsessed with AI."
               className="hero-role-type"
               speed={28}
               delay={900}
