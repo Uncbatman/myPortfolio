@@ -6,6 +6,11 @@ export default function Home() {
   return (
     <main className="portfolio-page">
       <EditorialHero />
+      <div className="below-hero-cta section-shell">
+        <a className="button button-quiet below-hero-button" href="#contact">
+          LET&apos;S TALK <span aria-hidden="true">↗</span>
+        </a>
+      </div>
 
       <section className="about-section page-section" id="about" aria-labelledby="about-title">
         <div className="section-shell about-layout">
@@ -19,7 +24,7 @@ export default function Home() {
               Curiosity is how I get there.
             </h2>
             <p className="about-summary paragraph-panel">
-              I&apos;m Adam Mbori—Uncbatman online. I turn curious ideas into expressive websites, practical AI integrations, and useful automations. I&apos;m always learning, reading, and testing new ideas; away from the screen, I recharge outdoors and stay active.
+              I&apos;m Adam Mbori—Uncbatman online. This portfolio brings together the websites, AI tools, and automations I build to help businesses serve customers and work more smoothly. I keep learning, reading, and recharging outdoors.
             </p>
           </div>
           <aside className="about-aside" aria-label="A few things that keep me curious">

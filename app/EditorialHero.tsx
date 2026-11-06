@@ -32,18 +32,19 @@ export default function EditorialHero() {
 
         <div className="hero-content">
           <h1 className="hero-name">
-            <TypewriterText text="Adam Mbori" className="hero-name-type" speed={74} delay={180} />
+            <TypewriterText text="Adam Mbori.." className="hero-name-type" speed={74} delay={180} />
           </h1>
           <p className="hero-role">
             <TypewriterText
-              text="Uncbatman — Creative Web / AI / Automation"
+              text="When customers have to guess, they move on."
               className="hero-role-type"
               speed={28}
               delay={900}
+              cursorStopAfter={3000}
             />
           </p>
           <p className="hero-intro paragraph-panel">
-            I build clear, distinctive websites, practical AI tools, and automations that help businesses serve customers and work more smoothly.
+            I build clear websites and practical tools that make it easy for clients to choose you.
           </p>
           <div className="hero-actions">
             <a className="button button-light" href="https://wa.me/254792120237">

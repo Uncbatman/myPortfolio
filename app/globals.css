@@ -300,6 +300,11 @@ button:focus-visible {
   animation: cursor-blink 900ms steps(2, start) infinite;
 }
 
+.typewriter-caret.cursor-stopped::after {
+  animation: none;
+  opacity: 0;
+}
+
 .hero-name-type {
   display: inline-block;
   min-height: 0.88em;
@@ -377,6 +382,18 @@ button:focus-visible {
 .button-quiet:hover {
   border-color: var(--white);
   background: rgba(247, 247, 244, 0.08);
+}
+
+.below-hero-cta {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+}
+
+.below-hero-button {
+  min-height: 40px;
+  padding: 9px 16px;
+  font-size: 10px;
 }
 
 .hero-bottomline {

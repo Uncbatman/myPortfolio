@@ -23,6 +23,7 @@ type TypewriterTextProps = {
   className?: string;
   delay?: number;
   speed?: number;
+  cursorStopAfter?: number;
 };
 
 export default function TypewriterText({
@@ -30,6 +31,7 @@ export default function TypewriterText({
   className = "",
   delay = 0,
   speed = 48,
+  cursorStopAfter,
 }: TypewriterTextProps) {
   const reduceMotion = useSyncExternalStore(
     subscribeToMotionPreference,
@@ -37,6 +39,7 @@ export default function TypewriterText({
     getServerMotionPreference,
   );
   const [visibleCount, setVisibleCount] = useState(0);
+  const [cursorStopped, setCursorStopped] = useState(false);
 
   useEffect(() => {
     if (reduceMotion) return;
@@ -60,10 +63,19 @@ export default function TypewriterText({
     };
   }, [delay, reduceMotion, speed, text]);
 
+  useEffect(() => {
+    if (cursorStopAfter === undefined) return;
+
+    if (!reduceMotion && visibleCount < text.length) return;
+
+    const stopId = window.setTimeout(() => setCursorStopped(true), cursorStopAfter);
+    return () => window.clearTimeout(stopId);
+  }, [cursorStopAfter, reduceMotion, text, visibleCount]);
+
   const visibleText = reduceMotion ? text : text.slice(0, visibleCount);
 
   return (
-    <span className={`typewriter-caret ${className}`.trim()} aria-label={text} aria-live="off">
+    <span className={`typewriter-caret ${cursorStopped ? "cursor-stopped" : ""} ${className}`.trim()} aria-label={text} aria-live="off">
       {visibleText}
     </span>
   );
