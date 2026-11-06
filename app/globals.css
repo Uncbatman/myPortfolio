@@ -282,7 +282,7 @@ button:focus-visible {
   letter-spacing: -0.075em;
   line-height: 0.88;
   overflow-wrap: anywhere;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .typewriter-caret {
